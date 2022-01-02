@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ViewFlipper
+        android:id="@+id/vf_webview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/lyt_loading"
+            layout="@layout/lyt_loading"/>
+
+        <include
+            android:id="@+id/lyt_no_internet"
+            layout="@layout/lyt_no_internet"/>
+
+        <im.delight.android.webview.AdvancedWebView
+            android:id="@+id/wv_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </ViewFlipper>
+
+</FrameLayout>
